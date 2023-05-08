@@ -230,11 +230,12 @@ const HomeScreen = () => {
               marginVertical: 15,
             }}
           >
-            <Text style={{fontSize: 16, fontWeight: "500"}}>Rooms</Text>
+            <Text style={{ fontSize: 16, fontWeight: "500" }}>Rooms</Text>
             <Pressable
               style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
             >
               <Pressable
+                onPress={() => setRooms(Math.max(1, rooms - 1))}
                 style={{
                   width: 26,
                   height: 26,
@@ -258,6 +259,7 @@ const HomeScreen = () => {
                 <Text>{rooms}</Text>
               </Pressable>
               <Pressable
+                onPress={() => setRooms((c) => c + 1)}
                 style={{
                   width: 26,
                   height: 26,
@@ -287,11 +289,12 @@ const HomeScreen = () => {
               marginVertical: 15,
             }}
           >
-            <Text style={{fontSize: 16, fontWeight: "500"}}>Adults</Text>
+            <Text style={{ fontSize: 16, fontWeight: "500" }}>Adults</Text>
             <Pressable
               style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
             >
               <Pressable
+                onPress={() => setAdults(Math.max(2, adults - 1))}
                 style={{
                   width: 26,
                   height: 26,
@@ -315,6 +318,7 @@ const HomeScreen = () => {
                 <Text>{adults}</Text>
               </Pressable>
               <Pressable
+                onPress={() => setAdults((c) => c + 1)}
                 style={{
                   width: 26,
                   height: 26,
@@ -344,11 +348,12 @@ const HomeScreen = () => {
               marginVertical: 15,
             }}
           >
-            <Text style={{fontSize: 16, fontWeight: "500"}}>Children</Text>
+            <Text style={{ fontSize: 16, fontWeight: "500" }}>Children</Text>
             <Pressable
               style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
             >
               <Pressable
+                onPress={() => setChildren(Math.max(0, children - 1))}
                 style={{
                   width: 26,
                   height: 26,
@@ -372,6 +377,7 @@ const HomeScreen = () => {
                 <Text>{children}</Text>
               </Pressable>
               <Pressable
+                onPress={() => setChildren((c) => c + 1)}
                 style={{
                   width: 26,
                   height: 26,
